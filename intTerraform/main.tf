@@ -17,6 +17,8 @@ resource "aws_instance" "web_server01" {
   vpc_security_group_ids = [aws_security_group.web_ssh.id]
   key_name               = "awskey"
   
+  user_data = "${file("deploy.sh")}"
+  
   tags = {
     "Name" : "intTest01"
   }  
