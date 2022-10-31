@@ -8,25 +8,6 @@ provider "aws" {
   
 }
 
-resource "aws_instance" "web_server01" {
-  ami = "ami-08c40ec9ead489470"
-  instance_type = "t2.micro"
-  subnet_id = aws_subnet.subnet1.id
-  key_name = "awskey"
-  vpc_security_group_ids = [aws_security_group.web_ssh.id]
-
-  user_data = "${file("deploy.sh")}"
-
-  tags = {
-    "Name" : "Webserver001"
-  }
-  
-}
-
-output "instance_ip" {
-  value = aws_instance.web_server01.public_ip
-  
-}
 # VPC
 
 resource "aws_vpc" "test-vpc" {
@@ -99,6 +80,26 @@ data "aws_availability_zones" "available" {
   state = "available"
 }
 
+
+resource "aws_instance" "web_server01" {
+  ami = "ami-08c40ec9ead489470"
+  instance_type = "t2.micro"
+  subnet_id = aws_subnet.subnet1.id
+  key_name = "awskey"
+  vpc_security_group_ids = [aws_security_group.web_ssh.id]
+
+  user_data = "${file("deploy.sh")}"
+
+  tags = {
+    "Name" : "Webserver001"
+  }
+  
+}
+
+output "instance_ip" {
+  value = aws_instance.web_server01.public_ip
+  
+}
 
 
 
