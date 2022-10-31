@@ -20,7 +20,7 @@ resource "aws_instance" "web_server01" {
   user_data = "${file("deploy.sh")}"
   
   tags = {
-    "Name" : "intTest01"
+    "Name" : "web_server01"
   }  
 }
 
