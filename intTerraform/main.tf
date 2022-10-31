@@ -62,7 +62,7 @@ resource "aws_subnet" "subnet1" {
 resource "aws_internet_gateway" "gw_1" {
   vpc_id = aws_vpc.test-vpc.id
 }
-
+ 
 # ROUTE TABLE
 resource "aws_route_table" "route_table1" {
   vpc_id = aws_vpc.test-vpc.id
@@ -72,17 +72,32 @@ resource "aws_route_table" "route_table1" {
     gateway_id = aws_internet_gateway.gw_1.id
   }
 }
-
+ 
 resource "aws_route_table_association" "route-subnet1" {
   subnet_id      = aws_subnet.subnet1.id
   route_table_id = aws_route_table.route_table1.id
 }
-
+ 
+# PRIVATE ROUTE TABLE
+resource "aws_route_table" "route_table2" {
+  vpc_id = aws_vpc.test-vpc.id
+ 
+  route {
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.nat_gateway_prob.id
+  }
+}
+ 
+resource "aws_route_table_association" "route-subnet2" {
+  subnet_id      = aws_subnet.subnet1.id
+  route_table_id = aws_route_table.route_table1.id
+}
+ 
+ 
 # DATA
 data "aws_availability_zones" "available" {
   state = "available"
 }
-
 
 
 
