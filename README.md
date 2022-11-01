@@ -68,13 +68,11 @@ Terraform deployment 4
   * After the VPC is successfully deployed it will be destroyed
 
 ![pipeline](https://github.com/Antoniorios17/kuralabs_deployment_4/blob/main/images/pipeline.PNG)
-
-
-## Additions
-## Diagram
-![diagram](https://github.com/Antoniorios17/kuralabs_deployment_4/blob/main/images/Diagram-deployment-4.PNG)
-
 # Additions
 ## Webhook
 * To make the current configuration more automated you can connect jenkins to the github repository
-* This will trigger jenkins whenever there is a new update on the reposiroty
+* This will trigger jenkins whenever there is a new update on the repository
+
+## Diagram
+![diagram](https://github.com/Antoniorios17/kuralabs_deployment_4/blob/main/images/Diagram-deployment-4.PNG)
+
