@@ -21,6 +21,8 @@ The EC2 doesn't need to be part of the vpc, we are trying to connect the jenkins
 * Test to verify authentication is successful
 
 ## Install Jenkins on an EC2
+
+
 ## Install terraform on the EC2
 ## Configure credentials on Jenkins
 ## Create a pipeline build on Jenkins
