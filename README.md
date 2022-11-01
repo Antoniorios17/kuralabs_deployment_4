@@ -77,4 +77,5 @@ Terraform deployment 4
 
 # Additions
 ## Webhook
-* To make the current configuration more automated you can connect jenkins to the github repository:
+* To make the current configuration more automated you can connect jenkins to the github repository
+* This will trigger jenkins whenever there is a new update on the reposiroty
