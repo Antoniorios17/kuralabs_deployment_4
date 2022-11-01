@@ -70,8 +70,25 @@ Terraform deployment 4
 ![pipeline](https://github.com/Antoniorios17/kuralabs_deployment_4/blob/main/images/pipeline.PNG)
 # Additions
 ## Webhook
-* To make the current configuration more automated you can connect jenkins to the github repository
-* This will trigger jenkins whenever there is a new update on the repository
+* To make the current configuration more automated you can connect jenkins to the github repository:
+  * Log in to github and access the repository online
+  * "Settings" of the repository
+  * Select "Webhoooks"
+  * Add Webhook
+  * ```
+    http://{Ip-address}:8080/github-webhook/
+    ```
+## Update the front end
+* this is a very simple change to the UI
+* I added my name as part of the website page
+* Updated the color of the front page
+* This is the original page:
+
+![UI-before](https://github.com/Antoniorios17/kuralabs_deployment_3/blob/main/images/UI-before.PNG)
+
+* This is the website after the changes:
+
+![UI-after](https://github.com/Antoniorios17/kuralabs_deployment_3/blob/main/images/UI-after.PNG)
 
 ## Diagram
 ![diagram](https://github.com/Antoniorios17/kuralabs_deployment_4/blob/main/images/Diagram-deployment-4.PNG)
