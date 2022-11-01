@@ -10,9 +10,8 @@ Terraform deployment 4
 4. Create a pipeline build on Jenkins
 5. Create a VPC with terraform and deploy the application
 6. Additions
-7. Diagram
+7. [Diagram](https://github.com/Antoniorios17/kuralabs_deployment_4/blob/main/images/Diagram-deployment-4.PNG)
 
-![tables](<link>)
 
 ## Install Jenkins on an EC2
 * Create an EC2 
@@ -73,7 +72,7 @@ Terraform deployment 4
 
 ## Additions
 ## Diagram
-
+![diagram](https://github.com/Antoniorios17/kuralabs_deployment_4/blob/main/images/Diagram-deployment-4.PNG)
 
 # Additions
 ## Webhook
