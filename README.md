@@ -68,7 +68,7 @@ Terraform deployment 4
   * Install the application on the EC2 inside its own VPC
   * After the VPC is successfully deployed it will be destroyed
 
-[]
+![pipeline](https://github.com/Antoniorios17/kuralabs_deployment_4/blob/main/images/pipeline.PNG)
 
 
 ## Additions
