@@ -15,15 +15,21 @@ Terraform deployment 4
 ![tables](<link>)
 
 ## Install Jenkins on an EC2
-The EC2 doesn't need to be part of the vpc, we are trying to connect the jenkins server from outside the VPC with an agent
-	@@ -29,72 +24,6 @@ The EC2 doesn't need to be part of the vpc, we are trying to connect the jenkins
-* Connect to the repository on github using personal token
-* Test to verify authentication is successful
+* Create an EC2 
+* Select an ubuntu image
+* Most settings can be left on default
+* Security groups:
+  * open ports 80, 22 and 8080
+* Install jenkins dependencies and then jenkins
+* I used an [script](https://github.com/Antoniorios17/kuralabs_deployment_4/blob/main/jenkins-terraform.sh) to automate the process of installation
+
+
 
 ## Install Jenkins on an EC2
-
+* Create a EC2 with the proper 
 
 ## Install terraform on the EC2
+
 ## Configure credentials on Jenkins
 ## Create a pipeline build on Jenkins
 ## Create a VPC with terraform and deploy the application
